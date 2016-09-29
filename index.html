@@ -1,48 +1,167 @@
----
-layout: default
----
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="r.onak | home">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <title>r.onak | home</title>
 
+    <!-- Add to homescreen for Chrome on Android -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <link rel="icon" sizes="192x192" href="images/android-desktop.png">
 
-<div class="container-fluid index">
-    <div class="row">
+    <!-- Add to homescreen for Safari on iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="r.onak">
+    <link rel="apple-touch-icon-precomposed" href="images/ios-desktop.png">
 
-        <div class="col-md-12 main content-panel">
+    <!-- Tile icon for Win8 (144x144 + tile color) -->
+    <meta name="msapplication-TileImage" content="images/touch/ms-touch-icon-144x144-precomposed.png">
+    <meta name="msapplication-TileColor" content="#3372DF">
 
-            <div class="gravatar">
-                <img src="{{ site.title_image }}" class="img-circle about-image" height="150" width="150" alt="{{ site.title }}" />
-            </div>
+    <link rel="shortcut icon" href="images/favicon.png">
 
-            <h1 class="header author-header" itemprop="headline">{{ site.title }}</h1>
+    <!-- SEO: If your mobile URL is different from the desktop URL, add a canonical link to the desktop page https://developers.google.com/webmasters/smartphone-sites/feature-phones -->
+    <!--
+    <link rel="canonical" href="http://www.example.com/">
+    -->
 
-            <div class="author-text">
-                {{ site.title_description }}
-            </div>
-
-            {% include social_links.html %}
-          </div>
-          <div class="col-md-12 main content-panel">
-
-            <div class="articles">
-
-              <h2>Latest Articles</h2>
-
-              <ul>
-                  {% for post in site.posts | limit: site.post_limit %}
-
-                      <li>
-                          <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-                          <small class="hidden-xs">{{ post.date | date: "%B %-d, %Y" }}</small>
-                      </li>
-
-                  {% endfor %}
-                  <li>
-                      <small><i><a href="{{ site.baseurl }}/posts/">more...</a></i></small>
-                  </li>
-              </ul>
-
-            </div>
-
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.1.3/material.teal-blue.min.css">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body class="mdl-color--grey-100 mdl-color-text--grey-700 mdl-base">
+    <!-- Always shows a header, even in smaller screens. -->
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+      <header class="mdl-layout__header">
+        <div class="mdl-layout__header-row">
+          <!-- Title -->
+          <span class="mdl-layout-title"><a class="site-title" href="index.html">r.onak</a></span>
+          <!-- Add spacer, to align navigation to the right -->
+          <!--<div class="mdl-layout-spacer"></div>-->
+          <!-- Navigation. We hide it in small screens. -->
+          <!--<nav class="mdl-navigation mdl-layout--large-screen-only">
+            <a class="mdl-navigation__link" href="projects.html">Projects</a>
+            <a class="mdl-navigation__link" href="timeline.html">Timeline(s)</a>
+            <a class="mdl-navigation__link" href="reading.html">Reading</a>
+            <a class="mdl-navigation__link" href="bucket-list.html">The Bucket List</a>
+            <a class="mdl-navigation__link" href="about.html">About</a>
+          </nav>-->
         </div>
-
+      </header>
+      <div class="mdl-layout__drawer onak-drawer">
+        <div class="onak-profile">
+          <div class="onak-pic">
+            <img src="images/1.jpg" alt="">
+            <img src="images/2.jpg" alt="">
+            <img src="images/3.jpeg" alt="">
+          </div>
+          <div class="onak-name">
+            r.onak
+          </div>
+        </div>
+        <nav class="mdl-navigation">
+          <a class="mdl-navigation__link drawer-link" href="projects.html">
+            <i class="fa fa-codepen fa-lg drawer-nav-icon" aria-hidden="true"></i>
+            Projects
+          </a>
+          <a class="mdl-navigation__link drawer-link" href="timeline.html">
+            <i class="fa fa-clock-o fa-lg drawer-nav-icon" aria-hidden="true"></i>
+            Timeline(s)
+          </a>
+          <a class="mdl-navigation__link drawer-link" href="reading.html">
+            <i class="fa fa-book fa-lg drawer-nav-icon" aria-hidden="true"></i>
+            Reading
+          </a>
+          <a class="mdl-navigation__link drawer-link" href="bucket-list.html">
+            <i class="fa fa-remove fa-lg drawer-nav-icon" aria-hidden="true"></i>
+            The Bucket List
+          </a>
+          <a class="mdl-navigation__link drawer-link" href="about.html">
+            <i class="fa fa-info-circle fa-lg drawer-nav-icon" aria-hidden="true"></i>
+            About
+          </a>
+        </nav>
+      </div>
+      <main class="mdl-layout__content">
+        <div class="mdl-grid">
+          <div class="onak-card mdl-cell mdl-card mdl-shadow--2dp">
+            <div class="mdl-card__title mdl-card--expand" style="background: url('images/code.png') bottom right 5% no-repeat rgb(255, 152, 0);">
+              <h2 class="mdl-card__title-text">Projects</h2>
+            </div>
+            <div class="mdl-card__supporting-text">
+              And there’s a million things I haven’t done. But just you wait, just you wait...
+            </div>
+            <div class="mdl-card__actions mdl-card--border">
+              <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" href="projects.html">
+                Build
+              </a>
+            </div>
+          </div>
+          <div class="onak-card mdl-cell mdl-card mdl-shadow--2dp">
+            <div class="mdl-card__title mdl-card--expand" style="background: url('images/time.png') bottom 25% right 5% no-repeat rgb(33, 150, 243);">
+              <h2 class="mdl-card__title-text">Timeline(s)</h2>
+            </div>
+            <div class="mdl-card__supporting-text">
+              History has its eyes on you.
+            </div>
+            <div class="mdl-card__actions mdl-card--border">
+              <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" href="timeline.html">
+                Warp
+              </a>
+            </div>
+          </div>
+          <div class="onak-card mdl-cell mdl-card mdl-shadow--2dp">
+            <div class="mdl-card__title mdl-card--expand" style="background: url('images/books.png') bottom right 5% no-repeat rgb(121, 85, 72);">
+              <h2 class="mdl-card__title-text">Reading</h2>
+            </div>
+            <div class="mdl-card__supporting-text">
+              He started retreatin’ and readin’ every treatise on the shelf.
+            </div>
+            <div class="mdl-card__actions mdl-card--border">
+              <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" href="reading.html">
+                Shush
+              </a>
+            </div>
+          </div>
+          <div class="onak-card mdl-cell mdl-card mdl-shadow--2dp">
+            <div class="mdl-card__title mdl-card--expand" style="background: url('images/skull.png') bottom 20% right no-repeat rgb(233, 30, 99);">
+              <h2 class="mdl-card__title-text">The Bucket List</h2>
+            </div>
+            <div class="mdl-card__supporting-text">
+              If I see it comin’, do I run or do I let it be? Is it like a beat without a melody?
+            </div>
+            <div class="mdl-card__actions mdl-card--border">
+              <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" href="bucket-list.html">
+                Kick
+              </a>
+            </div>
+          </div>
+          <div class="onak-card mdl-cell mdl-card mdl-shadow--2dp">
+            <div class="mdl-card__title mdl-card--expand" style="background: url('images/info.png') bottom 15% right 5% no-repeat rgb(0, 150, 136);">
+              <h2 class="mdl-card__title-text">About</h2>
+            </div>
+            <div class="mdl-card__supporting-text">
+              Oh my God, tear this dude apart!
+            </div>
+            <div class="mdl-card__actions mdl-card--border">
+              <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" href="about.html">
+                Ignore
+              </a>
+            </div>
+          </div>
+        </div>
+        <footer class="mdl-mini-footer">
+          <div class="mdl-mini-footer--left-section">
+            Lives with <i class="fa fa-heart" style="color: #C04848"></i> at <a href="https://github.com/ron4ex/ron4ex.github.io"><i class="fa fa-code"></i> GitHub</a>
+          </div>
+        </footer>
+      </main>
     </div>
-</div>
+    <script defer src="https://code.getmdl.io/1.2.1/material.min.js"></script>
+    <script src="https://use.fontawesome.com/c006e30bdd.js"></script>
+  </body>
+</html>

@@ -1,2 +1,2 @@
 # ron4ex.github.io
-Jekyll Powered Personal Blog (Experimental)
+Static HTML site made using Material Design Lite (Google's [MDL](https://getmdl.io/))
