@@ -121,93 +121,6 @@ a {
   font-size: 13px;
 }
 
-/*.onak-list-action {
-  width: 300px;
-}*/
-
-.timeline {
-  position: relative;
-  overflow: auto;
-}
-.timeline:before {
-  content: '';
-  position: absolute;
-  height: 100%;
-  width: 5px;
-  background: #646464;
-  left: 0;
-}
-.timeline .year {
-  background: #646464;
-  color: #fff;
-  max-width: 6em;
-  margin: 0 auto 0.5em;
-  /*margin: 0 auto;*/
-  padding: 0.5em;
-  text-align: center;
-  position: relative;
-  clear: both;
-}
-.timeline .events{
-  overflow: auto;
-  margin-bottom: 1em;
-}
-.timeline .onak-card {
-  margin: 1em;
-  width: auto;
-}
-/*.timeline ul {
-  list-style: none;
-  padding: 0 0 0 1em;
-  z-index: 1;
-}*/
-/*.timeline li {
-  background: rgb(0,150,136);
-  color: #fff;
-  padding: 1em;
-  margin-bottom: 1em;
-  position: relative;
-}
-
-.timeline h3 {
-  margin-top: 0;
-}
-.timeline time {
-  font-style: italic;
-}*/
-/*Following settings are for wider screens. They override the above default ones wherever applicable.*/
-@media screen and (min-width: 40em) {
-
-  .timeline:before {
-    left: 50%;
-  }
-  /*.timeline ul {
-    padding-left: 0;
-    max-width: 700px;
-    margin: 0 auto;
-  }*/
-  /*.timeline li {
-    width: 42%;
-  }*/
-  .timeline .onak-card:nth-child(even) {
-    float: right;
-    /*margin: 1em auto 1em 48%;*/
-  }
-  .timeline .onak-card:nth-child(odd) {
-    /*margin: 1em 48% 1em auto;*/ /*Conver these into classes*/
-    float: left;
-  }
-  .timeline .onak-card:nth-child(odd):before {
-    border-top: 1em solid #dddddd;
-    border-right: 1em solid transparent;
-    right: -1em;
-    left: auto;
-  }
-  .timeline .onak-card:nth-of-type(2n+1) {
-    clear: both;
-  }
-}
-
 @media (max-width: 479px) {
   /*.onak-sm-username {
     display: none;
@@ -215,9 +128,12 @@ a {
   .onak-sm-icon {
     width: 100%;
   }
+  .onak-content {
+    padding: 28px;
+  }
 }
 
-/* List */
+/* List Start */
 .onak-list {
   margin-bottom: 16px;
 }
@@ -267,3 +183,32 @@ a {
 .onak-no-margin-bottom {
   margin-bottom: 0;
 }
+/* List End */
+
+/* Timeline Start */
+.onak-timeline-month {
+  padding: 0 0 0 8px;
+}
+
+.onak-timeline-month .mdl-cell {
+  margin-bottom: 0;
+}
+
+.onak-timeline-month-chip {
+  width: auto;
+}
+
+.mdl-tooltip {
+  font-weight: 400;
+  line-height: 18px;
+  max-width: 220px;
+}
+
+.tl-tt-rating i {
+  color: gold;
+}
+
+.mdl-tooltip--uppercase {
+  text-transform: uppercase;
+}
+/* Timeline End */
