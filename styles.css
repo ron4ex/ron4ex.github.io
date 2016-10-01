@@ -186,6 +186,12 @@ a {
 /* List End */
 
 /* Timeline Start */
+.onak-timeline {
+  margin-bottom: 16px;
+}
+.onak-timeline-year {
+  margin-top: 8px;
+}
 .onak-timeline-month {
   padding: 0 0 0 8px;
 }
@@ -202,6 +208,15 @@ a {
   font-weight: 400;
   line-height: 18px;
   max-width: 220px;
+}
+
+.mdl-tooltip img {
+  max-width: 200px;
+  margin-bottom: 8px;
+}
+
+.mdl-chip__text .fa-lg {
+  margin-right: 1px;
 }
 
 .tl-tt-rating i {
