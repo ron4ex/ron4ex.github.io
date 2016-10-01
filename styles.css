@@ -238,7 +238,7 @@ a {
 /* Reading List Start */
 .reading-list {
   max-width: 550px;
-  margin: 0 auto;
+  /*margin: 0 auto;*/
   margin-bottom: 16px;
 }
 .reading-list-legend {
