@@ -131,6 +131,9 @@ a {
   .onak-content {
     padding: 28px;
   }
+  .reading-list span {
+    font-size: 90% !important;
+  }
 }
 
 /* List Start */
@@ -231,3 +234,51 @@ a {
   text-transform: uppercase;
 }
 /* Timeline End */
+
+/* Reading List Start */
+.reading-list {
+  max-width: 550px;
+  margin: 0 auto;
+  margin-bottom: 16px;
+}
+.reading-list-legend {
+  font-size: 13px;
+  margin: 0 auto;
+}
+
+.reading-list-legend > .mdl-cell {
+  width: auto;
+}
+
+.reading-list .mdl-list__item, 
+.reading-list .mdl-list__item-primary-content, 
+.reading-list .mdl-list__item-sub-title {
+  height: unset;
+}
+
+.reading-list > .mdl-list__item:not(:last-child) {
+    border-bottom: 1px solid rgba(0,0,0,.13);
+}
+
+.reading-list > .mdl-list__item .mdl-list__item-icon {
+  font-size: 24px;
+  margin-right: 16px;
+}
+
+.reading-list .mdl-list__item-secondary-content .fa {
+  font-size: 24px;
+}
+
+.reading-list .mdl-list__item-secondary-content .fa-check-square {
+  color: #757575;
+}
+
+.reading-list .mdl-list__item-secondary-content .fa-square-o {
+  color: #757575;
+}
+
+.reading-list .mdl-list__item-secondary-content .fa-square {
+  color: rgb(33, 150, 243);
+}
+
+/* Reading List End */
