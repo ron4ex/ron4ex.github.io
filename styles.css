@@ -211,8 +211,12 @@ a {
 }
 
 .mdl-tooltip img {
-  max-width: 200px;
+  width: 100%;
   margin-bottom: 8px;
+}
+
+.mdl-chip__text {
+  font-size: 13.5px;
 }
 
 .mdl-chip__text .fa-lg {
