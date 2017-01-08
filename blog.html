@@ -4,6 +4,7 @@ title: blog
 ---
 
 <h3>Blog</h3>
+{% if site.posts.size > 0 %}
 <ul style="list-style: none; padding: 0;">
     {% for post in site.posts %}
     <li style="padding: 16px 0; border-bottom: 1px solid rgba(0,0,0,.13);">
@@ -12,3 +13,6 @@ title: blog
     </li>
     {% endfor %}
 </ul>
+{% else %}
+<p style="color: #999; text-align: center;">No Posts Yet</p>
+{% endif %}
