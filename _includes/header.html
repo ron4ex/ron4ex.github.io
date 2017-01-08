@@ -1,0 +1,26 @@
+<header class="mdl-layout__header">
+    <div class="mdl-layout__header-row">
+        <!-- Title -->
+        <span class="mdl-layout-title"><a class="site-title" href="index.html">{{site.title}}</a></span>
+    </div>
+</header>
+<div class="mdl-layout__drawer onak-drawer">
+    <div class="onak-profile">
+        <div class="onak-pic">
+        <img src="{{ "/assets/images/1.jpg" | relative_url }}" alt="">
+        <img src="{{ "/assets/images/2.jpg" | relative_url }}" alt="">
+        <img src="{{ "/assets/images/3.jpeg" | relative_url }}" alt="">
+        </div>
+        <div class="onak-name">
+        {{site.title}}
+        </div>
+    </div>
+    <nav class="mdl-navigation">
+        {% for homeCard in site.data.homeCards %}
+        <a class="mdl-navigation__link drawer-link" href="{{ homeCard.pageToLink | relative_url }}">
+        <i class="fa {{ homeCard.faIcon }} fa-lg drawer-nav-icon" aria-hidden="true"></i>
+        {{ homeCard.title }}
+        </a>
+        {% endfor %}
+    </nav>
+</div>

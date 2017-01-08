@@ -1,302 +1,80 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="description" content="r.onak | timeline">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
-    <title>r.onak | timeline</title>
+---
+layout: page
+title: timeline
+---
 
-    <!-- Add to homescreen for Chrome on Android -->
-    <meta name="mobile-web-app-capable" content="yes">
-    <link rel="icon" sizes="192x192" href="images/android-desktop.png">
-
-    <!-- Add to homescreen for Safari on iOS -->
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    <meta name="apple-mobile-web-app-title" content="r.onak">
-    <link rel="apple-touch-icon-precomposed" href="images/ios-desktop.png">
-
-    <!-- Tile icon for Win8 (144x144 + tile color) -->
-    <meta name="msapplication-TileImage" content="images/touch/ms-touch-icon-144x144-precomposed.png">
-    <meta name="msapplication-TileColor" content="#3372DF">
-
-    <link rel="shortcut icon" href="images/favicon.png">
-
-    <!-- SEO: If your mobile URL is different from the desktop URL, add a canonical link to the desktop page https://developers.google.com/webmasters/smartphone-sites/feature-phones -->
-    <!--
-    <link rel="canonical" href="http://www.example.com/">
-    -->
-
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <link rel="stylesheet" href="https://code.getmdl.io/1.2.1/material.teal-blue.min.css">
-    <link rel="stylesheet" href="styles.css">
-  </head>
-  <body class="mdl-color--grey-100 mdl-color-text--grey-700 mdl-base">
-    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
-      <header class="mdl-layout__header">
-        <div class="mdl-layout__header-row">
-          <!-- Title -->
-          <span class="mdl-layout-title"><a class="site-title" href="index.html">r.onak</a></span>
-          <!-- Add spacer, to align navigation to the right -->
-          <!--<div class="mdl-layout-spacer"></div>-->
-          <!-- Navigation. We hide it in small screens. -->
-          <!--<nav class="mdl-navigation mdl-layout--large-screen-only">
-            <a class="mdl-navigation__link" href="projects.html">Projects</a>
-            <a class="mdl-navigation__link" href="timeline.html">Timeline(s)</a>
-            <a class="mdl-navigation__link" href="reading.html">Reading</a>
-            <a class="mdl-navigation__link" href="bucket-list.html">The Bucket List</a>
-            <a class="mdl-navigation__link" href="about.html">About</a>
-          </nav>-->
-        </div>
-      </header>
-      <div class="mdl-layout__drawer onak-drawer">
-        <div class="onak-profile">
-          <div class="onak-pic">
-            <img src="images/1.jpg" alt="">
-            <img src="images/2.jpg" alt="">
-            <img src="images/3.jpeg" alt="">
-          </div>
-          <div class="onak-name">
-            r.onak
-          </div>
-        </div>
-        <!--<span class="mdl-layout-title">Title</span>-->
-        <nav class="mdl-navigation">
-          <a class="mdl-navigation__link drawer-link" href="projects.html">
-            <i class="fa fa-codepen fa-lg drawer-nav-icon" aria-hidden="true"></i>
-            Projects
-          </a>
-          <a class="mdl-navigation__link drawer-link" href="timeline.html">
-            <i class="fa fa-clock-o fa-lg drawer-nav-icon" aria-hidden="true"></i>
-            Timeline(s)
-          </a>
-          <a class="mdl-navigation__link drawer-link" href="reading.html">
-            <i class="fa fa-book fa-lg drawer-nav-icon" aria-hidden="true"></i>
-            Reading
-          </a>
-          <a class="mdl-navigation__link drawer-link" href="bucket-list.html">
-            <i class="fa fa-remove fa-lg drawer-nav-icon" aria-hidden="true"></i>
-            The Bucket List
-          </a>
-          <a class="mdl-navigation__link drawer-link" href="about.html">
-            <i class="fa fa-info-circle fa-lg drawer-nav-icon" aria-hidden="true"></i>
-            About
-          </a>
-        </nav>
-        
-      </div>
-      <div class="onak-ribbon"></div>
-      <main class="onak-main mdl-layout__content">
-        <div class="onak-container mdl-grid">
-          <div class="mdl-cell mdl-cell--2-col mdl-cell--hide-tablet mdl-cell--hide-phone"></div>
-            <div class="onak-content mdl-color--white mdl-shadow--4dp content mdl-cell mdl-cell--8-col">
-            <h3>Timeline</h3>
-            <p style="margin-bottom: 24px;">The events with a <i id="ttHelpDemo" class="material-icons" style="cursor: pointer; vertical-align: text-bottom;">help</i> icon have something more to say. Hover above (or tap on touch devices) to find out more about that event.</p>
-            <div class="mdl-tooltip mdl-tooltip--large" for="ttHelpDemo">
-                A witty event description!                          
-            </div>
-            <div class="onak-timeline">
-                <!--Year 2015-->
-                <div class="onak-timeline-year">
-                    <span class="mdl-chip mdl-chip--deletable mdl-color--teal">
-                        <span class="mdl-chip__text mdl-color-text--white">2015</span>
-                        <button id="tl2015" type="button" class="mdl-chip__action"><i class="material-icons">help</i></button>
-                    </span>
-                    <div class="mdl-tooltip mdl-tooltip--large" for="tl2015">
-                        <i>Life Changes</i> Index
-                        <div class="tl-tt-rating">
-                            <i class="material-icons">star</i>
-                            <i class="material-icons">star</i>
-                            <i class="material-icons">star</i>
-                            <i class="material-icons">star</i>
-                            <i class="material-icons">star_border</i>
-                        </div>
-                    </div>
-                </div>
-                <div class="onak-timeline-months">
-                    <!--Month Nov-->
-                    <div class="mdl-grid onak-timeline-month">
-                        <div class="onak-timeline-month-chip mdl-cell mdl-cell--2-col">
-                            <span class="mdl-chip mdl-chip--deletable mdl-color--orange">
-                                <span class="mdl-chip__text mdl-color-text--white">Nov</span>
-                                <button id="tl2015nov" type="button" class="mdl-chip__action"><i class="material-icons">help</i></button>
-                            </span>
-                            <div class="mdl-tooltip mdl-tooltip--large" for="tl2015nov">
-                                <i>Influencing</i> Index
-                                <div class="tl-tt-rating">
-                                    <i class="material-icons">star</i>
-                                    <i class="material-icons">star_border</i>
-                                    <i class="material-icons">star_border</i>
-                                    <i class="material-icons">star_border</i>
-                                    <i class="material-icons">star_border</i>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="onak-timeline-month-events mdl-cell mdl-cell--10-col">
-                            <span class="mdl-chip mdl-chip--deletable">
-                                <span class="mdl-chip__text">Red Software Office</span>
-                                <button id="tl2015nov1" type="button" class="mdl-chip__action"><i class="material-icons">help</i></button>
-                            </span>
-                            <div class="mdl-tooltip mdl-tooltip--large" for="tl2015nov1">
-                                Rented out a little place in Surat to centralize all the efforts towards building a <u>great company</u>.
-                            </div>
-                            <span class="mdl-chip mdl-chip--deletable">
-                                <span class="mdl-chip__text">Moved</span>
-                                <button id="tl2015nov2" type="button" class="mdl-chip__action"><i class="material-icons">help</i></button>
-                            </span>
-                            <div class="mdl-tooltip mdl-tooltip--large" for="tl2015nov2">
-                                Moved to <u>Surat</u> after spending 6 months at <u>Dhoraji</u>.
-                            </div>
-                            <span class="mdl-chip mdl-chip--deletable">
-                                <span class="mdl-chip__text">
-                                    <i class="fa fa-lg fa-picture-o" aria-hidden="true"></i>
-                                    Photo
-                                </span>
-                                <button id="tl2015nov3" type="button" class="mdl-chip__action"><i class="material-icons">help</i></button>
-                            </span>
-                            <div class="mdl-tooltip mdl-tooltip--large" for="tl2015nov3">
-                                <img src="images/timeline/movember2015.jpg" />
-                                Celebrated Movember
-                            </div>
-                        </div>
-                    </div>
-                    <!--Month Sep-->
-                    <div class="mdl-grid onak-timeline-month">
-                        <div class="onak-timeline-month-chip mdl-cell mdl-cell--2-col">
-                            <span class="mdl-chip mdl-chip--deletable mdl-color--orange">
-                                <span class="mdl-chip__text mdl-color-text--white">Sep</span>
-                                <button id="tl2015sep" type="button" class="mdl-chip__action"><i class="material-icons">help</i></button>
-                            </span>
-                            <div class="mdl-tooltip mdl-tooltip--large" for="tl2015sep">
-                                <i>Leadership</i> Index
-                                <div class="tl-tt-rating">
-                                    <i class="material-icons">star_half</i>
-                                    <i class="material-icons">star_border</i>
-                                    <i class="material-icons">star_border</i>
-                                    <i class="material-icons">star_border</i>
-                                    <i class="material-icons">star_border</i>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="onak-timeline-month-events mdl-cell mdl-cell--10-col">
-                            <span class="mdl-chip mdl-chip--deletable">
-                                <span class="mdl-chip__text">Turned 27</span>
-                                <button id="tl2015sep1" type="button" class="mdl-chip__action"><i class="material-icons">help</i></button>
-                            </span>
-                            <div class="mdl-tooltip mdl-tooltip--large" for="tl2015sep1">
-                                Celebrated the first birthday without any friends around in over 8 years.
-                            </div>
-                        </div>
-                    </div>
-                    <!--Month May-->
-                    <div class="mdl-grid onak-timeline-month">
-                        <div class="onak-timeline-month-chip mdl-cell mdl-cell--2-col">
-                            <span class="mdl-chip mdl-chip--deletable mdl-color--orange">
-                                <span class="mdl-chip__text mdl-color-text--white">May</span>
-                                <button id="tl2015may" type="button" class="mdl-chip__action"><i class="material-icons">help</i></button>
-                            </span>
-                            <div class="mdl-tooltip mdl-tooltip--large" for="tl2015may">
-                                <i>Burning Desire</i> Index
-                                <div class="tl-tt-rating">
-                                    <i class="material-icons">star</i>
-                                    <i class="material-icons">star</i>
-                                    <i class="material-icons">star</i>
-                                    <i class="material-icons">star_half</i>
-                                    <i class="material-icons">star_border</i>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="onak-timeline-month-events mdl-cell mdl-cell--10-col">
-                            <span class="mdl-chip mdl-chip--deletable">
-                                <span class="mdl-chip__text">Left My First Company</span>
-                                <button id="tl2015may1" type="button" class="mdl-chip__action"><i class="material-icons">help</i></button>
-                            </span>
-                            <div class="mdl-tooltip mdl-tooltip--large" for="tl2015may1">
-                                Left my first company <u>L&T Infotech</u> after a satisfying two and a half years. Discovered the coder inside me there.
-                            </div>
-                            <span class="mdl-chip mdl-chip--deletable">
-                                <span class="mdl-chip__text">Founded A Company</span>
-                                <button id="tl2015may2" type="button" class="mdl-chip__action"><i class="material-icons">help</i></button>
-                            </span>
-                            <div class="mdl-tooltip mdl-tooltip--large" for="tl2015may2">
-                                Founded a company called <u>Red Software</u> with college buddies.
-                            </div>
-                            <span class="mdl-chip mdl-chip--deletable">
-                                <span class="mdl-chip__text">Moved</span>
-                                <button id="tl2015may3" type="button" class="mdl-chip__action"><i class="material-icons">help</i></button>
-                            </span>
-                            <div class="mdl-tooltip mdl-tooltip--large" for="tl2015may3">
-                                Moved back to <u>Dhoraji</u> after bidding an emotional adieu to <u>Mumbai</u>.
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!--Year 2013-->
-                <div class="onak-timeline-year">
-                    <span class="mdl-chip mdl-chip--deletable mdl-color--teal">
-                        <span class="mdl-chip__text mdl-color-text--white">2013</span>
-                        <button id="tl2013" type="button" class="mdl-chip__action"><i class="material-icons">help</i></button>
-                    </span>
-                    <div class="mdl-tooltip mdl-tooltip--large" for="tl2013">
-                        <i>Fear Killing</i> Index
-                        <div class="tl-tt-rating">
-                            <i class="material-icons">star</i>
-                            <i class="material-icons">star</i>
-                            <i class="material-icons">star</i>
-                            <i class="material-icons">star_half</i>
-                            <i class="material-icons">star_border</i>
-                        </div>
-                    </div>
-                </div>
-                <!--Month Jan-->
-                <div class="mdl-grid onak-timeline-month">
-                    <div class="onak-timeline-month-chip mdl-cell mdl-cell--2-col">
-                        <span class="mdl-chip mdl-chip--deletable mdl-color--orange">
-                            <span class="mdl-chip__text mdl-color-text--white">Jan</span>
-                            <button id="tl2013jan" type="button" class="mdl-chip__action"><i class="material-icons">help</i></button>
-                        </span>
-                        <div class="mdl-tooltip mdl-tooltip--large" for="tl2013jan">
-                            <i>Vulnerability</i> Index
-                            <div class="tl-tt-rating">
-                                <i class="material-icons">star</i>
-                                <i class="material-icons">star</i>
-                                <i class="material-icons">star</i>
-                                <i class="material-icons">star</i>
-                                <i class="material-icons">star_border</i>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="onak-timeline-month-events mdl-cell mdl-cell--10-col">
-                        <span class="mdl-chip mdl-chip--deletable">
-                            <span class="mdl-chip__text">Joined My First Company</span>
-                            <button id="tl2013jan1" type="button" class="mdl-chip__action"><i class="material-icons">help</i></button>
-                        </span>
-                        <div class="mdl-tooltip mdl-tooltip--large" for="tl2013jan1">
-                            Joined my first company <u>L&T Infotech</u> at Mumbai.
-                        </div>
-                        <span class="mdl-chip mdl-chip--deletable">
-                            <span class="mdl-chip__text">Moved</span>
-                            <button id="tl2013jan2" type="button" class="mdl-chip__action"><i class="material-icons">help</i></button>
-                        </span>
-                        <div class="mdl-tooltip mdl-tooltip--large" for="tl2013jan2">
-                            Moved to the dreaded city of <u>Mumbai</u> from <u>Dhoraji</u>.
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <p>I'll keep changing and adding events to this timeline almost at random. I plan to <a href="https://twitter.com/BabaBurgundy" target="_blank">tweet<i style="vertical-align: super;" class="fa fa-twitter" aria-hidden="true"></i></a> everytime I do that.</p>
-          </div>
-        </div>
-        <footer class="mdl-mini-footer">
-          <div class="mdl-mini-footer--left-section">
-            Lives with <i class="fa fa-heart" style="color: #C04848"></i> at <a href="https://github.com/ron4ex/ron4ex.github.io"><i class="fa fa-code"></i> GitHub</a>
-          </div>
-        </footer>
-      </main>
+<div class="onak-container mdl-grid">
+    <div class="mdl-cell mdl-cell--2-col mdl-cell--hide-tablet mdl-cell--hide-phone"></div>
+    <div class="onak-content mdl-color--white mdl-shadow--4dp content mdl-cell mdl-cell--8-col">
+    <h3>Timeline</h3>
+    <p style="margin-bottom: 24px;">The events with a <i id="ttHelpDemo" class="material-icons" style="cursor: pointer; vertical-align: text-bottom;">help</i> icon have something more to say. Hover above (or tap on touch devices) to find out more about that event.</p>
+    <div class="mdl-tooltip mdl-tooltip--large" for="ttHelpDemo">
+        A witty event description!                          
     </div>
-    <script defer src="https://code.getmdl.io/1.2.1/material.min.js"></script>
-    <script src="https://use.fontawesome.com/c006e30bdd.js"></script>
-  </body>
-</html>
+    <div class="onak-timeline">
+        {% for year in site.data.timeline.years %}
+        <div class="onak-timeline-year">
+            <span class="mdl-chip mdl-chip--deletable mdl-color--teal">
+                <span class="mdl-chip__text mdl-color-text--white">{{year.title}}</span>
+                <button id="tl{{year.title}}" type="button" class="mdl-chip__action"><i class="material-icons">help</i></button>
+            </span>
+            <div class="mdl-tooltip mdl-tooltip--large" for="tl{{year.title}}">
+                <i>{{year.indexTitle}}</i> Index
+                <div class="tl-tt-rating">
+                    <!-- Add support for 3.5 stars -->
+                    {% assign stars = {{year.stars}} %}
+                    {% assign emptyStars = 5 | minus: stars %}
+                    {% for i in (1..stars) %}
+                    <i class="material-icons">star</i>
+                    {% endfor %}
+                    {% if emptyStars > 0 %}
+                        {% for i in (1..emptyStars) %}
+                        <i class="material-icons">star_border</i>
+                        {% endfor %}
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+        <div class="onak-timeline-months">
+            {% for month in year.months %}
+            <div class="mdl-grid onak-timeline-month">
+                <div class="onak-timeline-month-chip mdl-cell mdl-cell--2-col">
+                    <span class="mdl-chip mdl-chip--deletable mdl-color--orange">
+                        <span class="mdl-chip__text mdl-color-text--white">{{month.title}}</span>
+                        <button id="tl{{year.title}}{{month.title}}" type="button" class="mdl-chip__action"><i class="material-icons">help</i></button>
+                    </span>
+                    <div class="mdl-tooltip mdl-tooltip--large" for="tl{{year.title}}{{month.title}}">
+                        <i>{{month.indexTitle}}</i> Index
+                        <div class="tl-tt-rating">
+                            {% assign stars = {{month.stars}} %}
+                            {% assign emptyStars = 5 | minus: stars %}
+                            {% for i in (1..stars) %}
+                            <i class="material-icons">star</i>
+                            {% endfor %}
+                            {% if emptyStars > 0 %}
+                                {% for i in (1..emptyStars) %}
+                                <i class="material-icons">star_border</i>
+                                {% endfor %}
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+                <div class="onak-timeline-month-events mdl-cell mdl-cell--10-col">
+                    {% for event in month.events %}
+                        <span class="mdl-chip mdl-chip--deletable">
+                            <span class="mdl-chip__text">{{event.title}}</span>
+                            <button id="tl{{year.title}}{{month.title}}{{forloop.index}}" type="button" class="mdl-chip__action"><i class="material-icons">help</i></button>
+                        </span>
+                        <div class="mdl-tooltip mdl-tooltip--large" for="tl{{year.title}}{{month.title}}{{forloop.index}}">
+                            {{event.desc}}
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        {% endfor %}
+    </div>
+    <p>I'll keep changing and adding events to this timeline almost at random. I plan to <a href="https://twitter.com/BabaBurgundy" target="_blank">tweet<i style="vertical-align: super;" class="fa fa-twitter" aria-hidden="true"></i></a> everytime I do that.</p>
+    </div>
+    </div>

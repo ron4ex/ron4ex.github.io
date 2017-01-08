@@ -1,0 +1,12 @@
+title: r.onak
+author: https://github.com/ron4ex
+description: > # this means to ignore newlines until "baseurl:"
+  Web address of the person who goes by the name Ronak Baldha
+baseurl: ""
+
+# Build settings
+markdown: kramdown
+# theme: minima
+exclude:
+  - Gemfile
+  - Gemfile.lock

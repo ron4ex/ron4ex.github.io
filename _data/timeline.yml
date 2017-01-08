@@ -1,0 +1,61 @@
+# Year and Month title fields should not contain whitespace as they are used for html id
+# Image in event description is not path safe
+# HTML in event descriptions should not be a part of this file
+years:
+    - 
+        title: 2015
+        indexTitle: Life Changes
+        stars: 3
+        months:
+            -
+                title: Nov
+                indexTitle: Influencing
+                stars: 1
+                events:
+                    - 
+                        title: Red Software Office
+                        desc: Rented out a little place in Surat to centralize all the efforts towards building a <u>great company</u>.
+                    - 
+                        title: Moved
+                        desc: Moved to <u>Surat</u> after spending 6 months at <u>Dhoraji</u>.
+                    -
+                        title: <i class="fa fa-lg fa-picture-o" aria-hidden="true"></i> Photo
+                        desc: <img src="/assets/images/timeline/movember2015.jpg" /> Celebrated Movember
+            -
+                title: Sep
+                indexTitle: Leadership
+                stars: 1
+                events:
+                    - 
+                        title: Turned 27
+                        desc: Celebrated the first birthday without any friends around in over 8 years.
+            -
+                title: May
+                indexTitle: Burning Desire
+                stars: 1
+                events:
+                    - 
+                        title: Left My First Company
+                        desc: Left my first company <u>L&T Infotech</u> after a satisfying two and a half years. Discovered the coder inside me there.
+                    - 
+                        title: Founded A Company
+                        desc: Founded a company called <u>Red Software</u> with college buddies.
+                    -
+                        title: Moved
+                        desc: Moved back to <u>Dhoraji</u> after bidding an emotional adieu to <u>Mumbai</u>.
+    -
+        title: 2013
+        indexTitle: Fear Killing
+        stars: 4
+        months:
+            - 
+                title: Jan
+                indexTitle: Vulnerability
+                stars: 4
+                events:
+                    -
+                        title: Joined My First Company
+                        desc: Joined my first company <u>L&T Infotech</u> at Mumbai.
+                    -
+                        title: Moved
+                        desc: Moved to the dreaded city of <u>Mumbai</u> from <u>Dhoraji</u>.
