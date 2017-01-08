@@ -3,41 +3,36 @@ layout: page
 title: the bucket list
 ---
 
-<div class="onak-container mdl-grid">
-    <div class="mdl-cell mdl-cell--2-col mdl-cell--hide-tablet mdl-cell--hide-phone"></div>
-    <div class="onak-content mdl-color--white mdl-shadow--4dp content mdl-cell mdl-cell--8-col">
-    <h3>The Bucket List</h3>
-    <p>The whole thinking behind the concept of a bucket list is to create a list of challenging goals.
-        I've gone one step further to also create a list of impossible goals. Check 'em out!</p>
-    <h4>Improbable</h4>
-    <ul class="reading-list mdl-list">
-        {% for item in site.data.bucketList.improbable %}
-        <li class="mdl-list__item mdl-list__item--two-line">
-            <i class="fa {{item.faIcon}} mdl-list__item-icon"></i>
-            <span class="mdl-list__item-primary-content">
-            <span>{{item.title}}</span>
-            <span class="mdl-list__item-sub-title">{{item.desc}}</span>
-            </span>
-            <span class="mdl-list__item-secondary-content">
-                <i class="fa {{item.faStatusIcon}}" aria-hidden="true"></i>
-            </span>
-        </li>
-        {% endfor %}
-    </ul>
-    <h4>Impossible</h4>
-    <ul class="reading-list mdl-list">
-        {% for item in site.data.bucketList.impossible %}
-        <li class="mdl-list__item mdl-list__item--two-line">
-            <i class="fa {{item.faIcon}} mdl-list__item-icon"></i>
-            <span class="mdl-list__item-primary-content">
-            <span>{{item.title}}</span>
-            <span class="mdl-list__item-sub-title">{{item.desc}}</span>
-            </span>
-            <span class="mdl-list__item-secondary-content">
-                <i class="fa {{item.faStatusIcon}}" aria-hidden="true"></i>
-            </span>
-        </li>
-        {% endfor %}
-    </ul>
-    </div>
-</div>
+<h3>The Bucket List</h3>
+<p>The whole thinking behind the concept of a bucket list is to create a list of challenging goals.
+    I've gone one step further to also create a list of impossible goals. Check 'em out!</p>
+<h4>Improbable</h4>
+<ul class="reading-list mdl-list">
+    {% for item in site.data.bucketList.improbable %}
+    <li class="mdl-list__item mdl-list__item--two-line">
+        <i class="fa {{item.faIcon}} mdl-list__item-icon"></i>
+        <span class="mdl-list__item-primary-content">
+        <span>{{item.title}}</span>
+        <span class="mdl-list__item-sub-title">{{item.desc}}</span>
+        </span>
+        <span class="mdl-list__item-secondary-content">
+            <i class="fa {{item.faStatusIcon}}" aria-hidden="true"></i>
+        </span>
+    </li>
+    {% endfor %}
+</ul>
+<h4>Impossible</h4>
+<ul class="reading-list mdl-list">
+    {% for item in site.data.bucketList.impossible %}
+    <li class="mdl-list__item mdl-list__item--two-line">
+        <i class="fa {{item.faIcon}} mdl-list__item-icon"></i>
+        <span class="mdl-list__item-primary-content">
+        <span>{{item.title}}</span>
+        <span class="mdl-list__item-sub-title">{{item.desc}}</span>
+        </span>
+        <span class="mdl-list__item-secondary-content">
+            <i class="fa {{item.faStatusIcon}}" aria-hidden="true"></i>
+        </span>
+    </li>
+    {% endfor %}
+</ul>

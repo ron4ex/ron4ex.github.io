@@ -3,78 +3,73 @@ layout: page
 title: timeline
 ---
 
-<div class="onak-container mdl-grid">
-    <div class="mdl-cell mdl-cell--2-col mdl-cell--hide-tablet mdl-cell--hide-phone"></div>
-    <div class="onak-content mdl-color--white mdl-shadow--4dp content mdl-cell mdl-cell--8-col">
-    <h3>Timeline</h3>
-    <p style="margin-bottom: 24px;">The events with a <i id="ttHelpDemo" class="material-icons" style="cursor: pointer; vertical-align: text-bottom;">help</i> icon have something more to say. Hover above (or tap on touch devices) to find out more about that event.</p>
-    <div class="mdl-tooltip mdl-tooltip--large" for="ttHelpDemo">
-        A witty event description!                          
-    </div>
-    <div class="onak-timeline">
-        {% for year in site.data.timeline.years %}
-        <div class="onak-timeline-year">
-            <span class="mdl-chip mdl-chip--deletable mdl-color--teal">
-                <span class="mdl-chip__text mdl-color-text--white">{{year.title}}</span>
-                <button id="tl{{year.title}}" type="button" class="mdl-chip__action"><i class="material-icons">help</i></button>
-            </span>
-            <div class="mdl-tooltip mdl-tooltip--large" for="tl{{year.title}}">
-                <i>{{year.indexTitle}}</i> Index
-                <div class="tl-tt-rating">
-                    <!-- Add support for 3.5 stars -->
-                    {% assign stars = {{year.stars}} %}
-                    {% assign emptyStars = 5 | minus: stars %}
-                    {% for i in (1..stars) %}
-                    <i class="material-icons">star</i>
+<h3>Timeline</h3>
+<p style="margin-bottom: 24px;">The events with a <i id="ttHelpDemo" class="material-icons" style="cursor: pointer; vertical-align: text-bottom;">help</i> icon have something more to say. Hover above (or tap on touch devices) to find out more about that event.</p>
+<div class="mdl-tooltip mdl-tooltip--large" for="ttHelpDemo">
+    A witty event description!                          
+</div>
+<div class="onak-timeline">
+    {% for year in site.data.timeline.years %}
+    <div class="onak-timeline-year">
+        <span class="mdl-chip mdl-chip--deletable mdl-color--teal">
+            <span class="mdl-chip__text mdl-color-text--white">{{year.title}}</span>
+            <button id="tl{{year.title}}" type="button" class="mdl-chip__action"><i class="material-icons">help</i></button>
+        </span>
+        <div class="mdl-tooltip mdl-tooltip--large" for="tl{{year.title}}">
+            <i>{{year.indexTitle}}</i> Index
+            <div class="tl-tt-rating">
+                <!-- Add support for 3.5 stars -->
+                {% assign stars = {{year.stars}} %}
+                {% assign emptyStars = 5 | minus: stars %}
+                {% for i in (1..stars) %}
+                <i class="material-icons">star</i>
+                {% endfor %}
+                {% if emptyStars > 0 %}
+                    {% for i in (1..emptyStars) %}
+                    <i class="material-icons">star_border</i>
                     {% endfor %}
-                    {% if emptyStars > 0 %}
-                        {% for i in (1..emptyStars) %}
-                        <i class="material-icons">star_border</i>
-                        {% endfor %}
-                    {% endif %}
-                </div>
+                {% endif %}
             </div>
         </div>
-        <div class="onak-timeline-months">
-            {% for month in year.months %}
-            <div class="mdl-grid onak-timeline-month">
-                <div class="onak-timeline-month-chip mdl-cell mdl-cell--2-col">
-                    <span class="mdl-chip mdl-chip--deletable mdl-color--orange">
-                        <span class="mdl-chip__text mdl-color-text--white">{{month.title}}</span>
-                        <button id="tl{{year.title}}{{month.title}}" type="button" class="mdl-chip__action"><i class="material-icons">help</i></button>
-                    </span>
-                    <div class="mdl-tooltip mdl-tooltip--large" for="tl{{year.title}}{{month.title}}">
-                        <i>{{month.indexTitle}}</i> Index
-                        <div class="tl-tt-rating">
-                            {% assign stars = {{month.stars}} %}
-                            {% assign emptyStars = 5 | minus: stars %}
-                            {% for i in (1..stars) %}
-                            <i class="material-icons">star</i>
+    </div>
+    <div class="onak-timeline-months">
+        {% for month in year.months %}
+        <div class="mdl-grid onak-timeline-month">
+            <div class="onak-timeline-month-chip mdl-cell mdl-cell--2-col">
+                <span class="mdl-chip mdl-chip--deletable mdl-color--orange">
+                    <span class="mdl-chip__text mdl-color-text--white">{{month.title}}</span>
+                    <button id="tl{{year.title}}{{month.title}}" type="button" class="mdl-chip__action"><i class="material-icons">help</i></button>
+                </span>
+                <div class="mdl-tooltip mdl-tooltip--large" for="tl{{year.title}}{{month.title}}">
+                    <i>{{month.indexTitle}}</i> Index
+                    <div class="tl-tt-rating">
+                        {% assign stars = {{month.stars}} %}
+                        {% assign emptyStars = 5 | minus: stars %}
+                        {% for i in (1..stars) %}
+                        <i class="material-icons">star</i>
+                        {% endfor %}
+                        {% if emptyStars > 0 %}
+                            {% for i in (1..emptyStars) %}
+                            <i class="material-icons">star_border</i>
                             {% endfor %}
-                            {% if emptyStars > 0 %}
-                                {% for i in (1..emptyStars) %}
-                                <i class="material-icons">star_border</i>
-                                {% endfor %}
-                            {% endif %}
-                        </div>
+                        {% endif %}
                     </div>
                 </div>
-                <div class="onak-timeline-month-events mdl-cell mdl-cell--10-col">
-                    {% for event in month.events %}
-                        <span class="mdl-chip mdl-chip--deletable">
-                            <span class="mdl-chip__text">{{event.title}}</span>
-                            <button id="tl{{year.title}}{{month.title}}{{forloop.index}}" type="button" class="mdl-chip__action"><i class="material-icons">help</i></button>
-                        </span>
-                        <div class="mdl-tooltip mdl-tooltip--large" for="tl{{year.title}}{{month.title}}{{forloop.index}}">
-                            {{event.desc}}
-                        </div>
-                    {% endfor %}
-                </div>
             </div>
-            {% endfor %}
+            <div class="onak-timeline-month-events mdl-cell mdl-cell--10-col">
+                {% for event in month.events %}
+                    <span class="mdl-chip mdl-chip--deletable">
+                        <span class="mdl-chip__text">{{event.title}}</span>
+                        <button id="tl{{year.title}}{{month.title}}{{forloop.index}}" type="button" class="mdl-chip__action"><i class="material-icons">help</i></button>
+                    </span>
+                    <div class="mdl-tooltip mdl-tooltip--large" for="tl{{year.title}}{{month.title}}{{forloop.index}}">
+                        {{event.desc}}
+                    </div>
+                {% endfor %}
+            </div>
         </div>
         {% endfor %}
     </div>
-    <p>I'll keep changing and adding events to this timeline almost at random. I plan to <a href="https://twitter.com/BabaBurgundy" target="_blank">tweet<i style="vertical-align: super;" class="fa fa-twitter" aria-hidden="true"></i></a> everytime I do that.</p>
-    </div>
-    </div>
+    {% endfor %}
+</div>
+<p>I'll keep changing and adding events to this timeline almost at random. I plan to <a href="https://twitter.com/BabaBurgundy" target="_blank">tweet<i style="vertical-align: super;" class="fa fa-twitter" aria-hidden="true"></i></a> everytime I do that.</p>

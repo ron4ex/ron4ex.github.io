@@ -30,6 +30,14 @@
   pageToLink: bucket-list.html
   faIcon: fa-remove
 
+- title: Blog
+  desc: Why do you write like you’re running out of time? Write day and night like you’re running out of time?
+  buttonText: Exorcise
+  accentColor: rgb(63, 168, 0)
+  image: blog.png
+  pageToLink: blog.html
+  faIcon: fa-pencil
+
 - title: About
   desc: Oh my God, tear this dude apart!
   buttonText: Ignore

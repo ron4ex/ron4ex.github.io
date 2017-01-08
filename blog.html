@@ -1,0 +1,14 @@
+---
+layout: page
+title: blog
+---
+
+<h3>Blog</h3>
+<ul style="list-style: none; padding: 0;">
+    {% for post in site.posts %}
+    <li style="padding: 16px 0; border-bottom: 1px solid rgba(0,0,0,.13);">
+        <span style="display: block; text-transform: uppercase; color: #999; font-size: 75%;">{{ post.date | date: "%b %-d, %Y" }}</span>
+        <span><a href="{{post.url}}" style="text-transform: uppercase;">{{post.title}}</a></span>
+    </li>
+    {% endfor %}
+</ul>

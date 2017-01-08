@@ -3,32 +3,27 @@ layout: page
 title: projects
 ---
 
-<div class="onak-container mdl-grid">
-    <div class="mdl-cell mdl-cell--2-col mdl-cell--hide-tablet mdl-cell--hide-phone"></div>
-    <div class="onak-content mdl-color--white mdl-shadow--4dp content mdl-cell mdl-cell--8-col">
-    <h3>Projects</h3>
-    <p>On this page I'll be listing the open source work that I have at my disposal (Sadly, I don't have anything yet apart from this site).</p> 
-    <p>I'm not sure about putting the details of the private projects
-        for which I have worked at L&T Infotech and Red Software primarily because they'll just be that — the details!
-        And not the actual code; which would deny us the chance to engage in a code-y conversation.</p>
-    <ul class="reading-list mdl-list">
-        {% for project in site.data.projects %}
-        <li class="mdl-list__item mdl-list__item--two-line">
-            <!-- The following icon should be used linked to source -->
-            <i class="fa fa-github-alt mdl-list__item-icon"></i>
-            <span class="mdl-list__item-primary-content">
-            <span>{{ project.title }}</span>
-            <span class="mdl-list__item-sub-title">{{ project.subtitle }}</span>
-            </span>
-            <!-- The following secondary content can have forks/likes pulled from the github in future -->
-            <span class="mdl-list__item-secondary-content">
-                <!-- The following icon should be linked to demo (if any) -->
-                <a href="{{ project.link }}" target="_blank">
-                    <i class="fa fa-link" aria-hidden="true"></i>
-                </a>
-            </span>
-        </li>
-        {% endfor %}
-    </ul>
-    </div>
-</div>
+<h3>Projects</h3>
+<p>On this page I'll be listing the open source work that I have at my disposal (Sadly, I don't have anything yet apart from this site).</p> 
+<p>I'm not sure about putting the details of the private projects
+    for which I have worked at L&T Infotech and Red Software primarily because they'll just be that — the details!
+    And not the actual code; which would deny us the chance to engage in a code-y conversation.</p>
+<ul class="reading-list mdl-list">
+    {% for project in site.data.projects %}
+    <li class="mdl-list__item mdl-list__item--two-line">
+        <!-- The following icon should be used linked to source -->
+        <i class="fa fa-github-alt mdl-list__item-icon"></i>
+        <span class="mdl-list__item-primary-content">
+        <span>{{ project.title }}</span>
+        <span class="mdl-list__item-sub-title">{{ project.subtitle }}</span>
+        </span>
+        <!-- The following secondary content can have forks/likes pulled from the github in future -->
+        <span class="mdl-list__item-secondary-content">
+            <!-- The following icon should be linked to demo (if any) -->
+            <a href="{{ project.link }}" target="_blank">
+                <i class="fa fa-link" aria-hidden="true"></i>
+            </a>
+        </span>
+    </li>
+    {% endfor %}
+</ul>

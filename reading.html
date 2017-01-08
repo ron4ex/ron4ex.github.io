@@ -3,58 +3,53 @@ layout: page
 title: reading
 ---
 
-<div class="onak-container mdl-grid">
-    <div class="mdl-cell mdl-cell--2-col mdl-cell--hide-tablet mdl-cell--hide-phone"></div>
-    <div class="onak-content mdl-color--white mdl-shadow--4dp content mdl-cell mdl-cell--8-col">
-    <h3>Reading</h3>
-    {% for year in site.data.reading.years %}
-    <h4 style="border-bottom: 1px solid rgba(0,0,0,.13); text-align: center;">{{year.title}}</h4>
-    <ul class="reading-list mdl-list">
-        {% for book in year.books %}
-        <li class="mdl-list__item mdl-list__item--two-line">
-            {% if book.type == "programming" %}
-            <i class="fa fa-file-code-o mdl-list__item-icon"></i>
-            {% elsif book.type == "fiction" %}
-            <i class="fa fa-magic mdl-list__item-icon"></i>
-            {% elsif book.type == "non-fiction" %}
-            <i class="fa fa-book mdl-list__item-icon"></i>
+<h3>Reading</h3>
+{% for year in site.data.reading.years %}
+<h4 style="border-bottom: 1px solid rgba(0,0,0,.13); text-align: center;">{{year.title}}</h4>
+<ul class="reading-list mdl-list">
+    {% for book in year.books %}
+    <li class="mdl-list__item mdl-list__item--two-line">
+        {% if book.type == "programming" %}
+        <i class="fa fa-file-code-o mdl-list__item-icon"></i>
+        {% elsif book.type == "fiction" %}
+        <i class="fa fa-magic mdl-list__item-icon"></i>
+        {% elsif book.type == "non-fiction" %}
+        <i class="fa fa-book mdl-list__item-icon"></i>
+        {% endif %}
+        <span class="mdl-list__item-primary-content">
+        <span>{{book.title}}</span>
+        <span class="mdl-list__item-sub-title">{{book.author}}</span>
+        </span>
+        <span class="mdl-list__item-secondary-content">
+            {% if book.status == "completed" %}
+            <i class="fa fa-check-square" aria-hidden="true"></i>
+            {% elsif book.status == "reading" %}
+            <i class="fa fa-square" aria-hidden="true"></i>
+            {% elsif book.status == "to-read" %}
+            <i class="fa fa-square-o" aria-hidden="true"></i>
             {% endif %}
-            <span class="mdl-list__item-primary-content">
-            <span>{{book.title}}</span>
-            <span class="mdl-list__item-sub-title">{{book.author}}</span>
-            </span>
-            <span class="mdl-list__item-secondary-content">
-                {% if book.status == "completed" %}
-                <i class="fa fa-check-square" aria-hidden="true"></i>
-                {% elsif book.status == "reading" %}
-                <i class="fa fa-square" aria-hidden="true"></i>
-                {% elsif book.status == "to-read" %}
-                <i class="fa fa-square-o" aria-hidden="true"></i>
-                {% endif %}
-            </span>
-        </li>
-        {% endfor %}
-    </ul>
+        </span>
+    </li>
     {% endfor %}
-    <div class="reading-list-legend mdl-grid">
-        <span class="mdl-cell">
-        <i class="fa fa-square mdl-color-text--blue" aria-hidden="true"></i> Reading
-        </span>
-        <span class="mdl-cell">
-        <i class="fa fa-square-o" style="color: #757575" aria-hidden="true"></i> To Be Read
-        </span>
-        <span class="mdl-cell">
-        <i class="fa fa-check-square" aria-hidden="true"></i> Completed
-        </span>
-        <span class="mdl-cell">
-            <i class="fa fa-file-code-o"></i> Programming
-        </span>
-        <span class="mdl-cell">
-            <i class="fa fa-magic"></i> Fiction
-        </span>
-        <span class="mdl-cell">
-            <i class="fa fa-book"></i> Non-fiction
-        </span>
-    </div>
-    </div>
-    </div>
+</ul>
+{% endfor %}
+<div class="reading-list-legend mdl-grid">
+    <span class="mdl-cell">
+    <i class="fa fa-square mdl-color-text--blue" aria-hidden="true"></i> Reading
+    </span>
+    <span class="mdl-cell">
+    <i class="fa fa-square-o" style="color: #757575" aria-hidden="true"></i> To Be Read
+    </span>
+    <span class="mdl-cell">
+    <i class="fa fa-check-square" aria-hidden="true"></i> Completed
+    </span>
+    <span class="mdl-cell">
+        <i class="fa fa-file-code-o"></i> Programming
+    </span>
+    <span class="mdl-cell">
+        <i class="fa fa-magic"></i> Fiction
+    </span>
+    <span class="mdl-cell">
+        <i class="fa fa-book"></i> Non-fiction
+    </span>
+</div>
