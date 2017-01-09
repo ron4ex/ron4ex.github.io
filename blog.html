@@ -5,11 +5,11 @@ title: blog
 
 <h3>Blog</h3>
 {% if site.posts.size > 0 %}
-<ul style="list-style: none; padding: 0;">
+<ul class="onak-blog-list">
     {% for post in site.posts %}
-    <li style="padding: 16px 0; border-bottom: 1px solid rgba(0,0,0,.13);">
-        <span style="display: block; text-transform: uppercase; color: #999; font-size: 75%;">{{ post.date | date: "%b %-d, %Y" }}</span>
-        <span><a href="{{post.url}}" style="text-transform: uppercase;">{{post.title}}</a></span>
+    <li class="onak-blog-list-item">
+        <span class="post-date">{{ post.date | date: "%b %-d, %Y" }}</span>
+        <span class="post-title"><a href="{{post.url}}">{{post.title}}</a></span>
     </li>
     {% endfor %}
 </ul>
