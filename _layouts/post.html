@@ -9,6 +9,9 @@ layout: default
             <h1 style="margin-bottom: 0; font-size: 34px;">{{page.title}}</h1>
             <p style="color: #999; font-style: italic;">by <a target="_blank" href="https://twitter.com/fooburr">@fooburr</a> on {{ page.date | date: "%b %-d, %Y" }}</p>
             {{ content }}
+            {% if site.disqus.shortname %}
+                {% include disqus_comments.html %}
+            {% endif %}
         </div>
     </div>
     {% include footer.html %}

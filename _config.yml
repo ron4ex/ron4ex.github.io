@@ -4,6 +4,8 @@ description: > # this means to ignore newlines until "baseurl:"
   Web address of the person who goes by the name Ronak Baldha
 baseurl: ""
 google_analytics: UA-90015621-1
+disqus:
+  shortname: onak
 
 # Build settings
 markdown: kramdown
