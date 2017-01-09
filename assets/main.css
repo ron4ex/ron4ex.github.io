@@ -325,3 +325,8 @@ a {
 .onak-blog-list-item > .post-title a {
    text-transform: uppercase;
 }
+
+.emoji {
+  width: auto;
+  height: 24px;
+}
