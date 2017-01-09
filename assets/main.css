@@ -1,0 +1,290 @@
+html, body {
+  font-family: 'Roboto', 'Helvetica', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+.site-title {
+  text-decoration: none;
+  color: inherit;
+}
+
+.drawer-nav-icon {
+  width: 1.5em;
+}
+
+.onak-sm-icon {
+  padding: 1em;
+  font-size: 16px;
+  width: auto;
+}
+
+.onak-sm-icon a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.onak-sm-icon i {
+  width: 1.1em;
+}
+
+.onak-card.mdl-card {
+  min-height: 300px;
+}
+
+.onak-card > .mdl-card__title {
+  color: #fff;
+  background: rgb(0,150,136);
+}
+
+.onak-card > .mdl-card__supporting-text {
+  color: #616161;
+  min-height: 40px;
+}
+
+.onak-profile {
+  width: 100%;
+  background: url('images/back.png') left top no-repeat;
+  text-align: center;
+  background-size: cover;
+}
+
+.onak-name {
+  background: rgba(0, 0, 0, 0.37);
+  padding: 7px 0;
+  color: #fff;
+  position: relative;
+}
+
+.onak-pic {
+  padding: 12px;
+}
+
+.onak-pic > img {
+  width: 47px;
+  height: 47px;
+  border-radius: 50%;
+  border: 3px solid rgba(0, 0, 0, 0.14);
+  box-sizing: content-box;
+}
+
+.onak-drawer {
+  border-right: none;
+}
+
+.onak-ribbon {
+  width: 100%;
+  height: 40vh;
+  background: url('images/ribbon.jpg');
+  background-size: cover;
+  flex-shrink: 0;
+}
+
+.onak-main {
+  margin-top: -35vh;
+  flex-shrink: 0;
+}
+
+.onak-header .mdl-layout__header-row {
+  padding-left: 40px;
+}
+
+.onak-container {
+  max-width: 1600px;
+  width: calc(100% - 16px);
+  margin: 0 auto;
+}
+
+.onak-content {
+  border-radius: 2px;
+  padding: 56px;
+  margin-bottom: 80px;
+}
+
+.onak-content p {
+  font-size: 16px;
+}
+
+.onak-layout.is-small-screen .onak-content {
+  padding: 40px 28px;
+}
+
+.onak-footer {
+  padding-left: 40px;
+}
+
+.onak-footer .mdl-mini-footer--link-list a {
+  font-size: 13px;
+}
+
+@media (max-width: 479px) {
+  /*.onak-sm-username {
+    display: none;
+  }*/
+  .onak-sm-icon {
+    width: 100%;
+  }
+  .onak-content {
+    padding: 28px;
+  }
+  .reading-list span {
+    font-size: 90% !important;
+  }
+}
+
+/* List Start */
+.onak-list {
+  margin-bottom: 16px;
+}
+
+.onak-list .onak-list-icon {
+  margin: 8px 0;
+  font-size: 75px;
+}
+
+.onak-list img {
+  height: 75px;
+  margin: 8px 0;
+}
+
+.onak-list .onak-list-content:not(:last-child) {
+    border-bottom: 1px solid rgba(0,0,0,.13);
+}
+
+.onak-list .onak-list-content {
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  padding-top: 8px;
+  font-size: 16px;
+  padding-bottom: 5px;
+}
+
+.onak-list-content h5 {
+  font-size: 16px;
+  margin: 0;
+  margin-bottom: 0.5em;
+}
+
+.onak-list .onak-list-title {
+  margin: 0 !important;
+  margin-bottom: 20px !important;
+}
+
+.onak-section-desc {
+  margin-bottom: 16px;
+  color: #a2a2a2;
+}
+
+.onak-no-margin-bottom {
+  margin-bottom: 0;
+}
+/* List End */
+
+/* Timeline Start */
+.onak-timeline {
+  margin-bottom: 16px;
+}
+.onak-timeline-year {
+  margin-top: 8px;
+}
+.onak-timeline-month {
+  padding: 0 0 0 8px;
+}
+
+.onak-timeline-month .mdl-cell {
+  margin-bottom: 0;
+}
+
+.onak-timeline-month-chip {
+  width: auto;
+}
+
+.mdl-tooltip {
+  font-weight: 400;
+  line-height: 18px;
+  max-width: 220px;
+}
+
+.mdl-tooltip img {
+  width: 100%;
+  margin-bottom: 8px;
+}
+
+.mdl-chip__text {
+  font-size: 13.5px;
+}
+
+.mdl-chip__text .fa-lg {
+  margin-right: 1px;
+}
+
+.tl-tt-rating i {
+  color: gold;
+}
+
+.mdl-tooltip--uppercase {
+  text-transform: uppercase;
+}
+/* Timeline End */
+
+/* Reading List Start */
+.reading-list {
+  max-width: 550px;
+  /*margin: 0 auto;*/
+  margin-bottom: 16px;
+}
+.reading-list-legend {
+  font-size: 13px;
+  margin: 0 auto;
+}
+
+.reading-list-legend > .mdl-cell {
+  width: auto;
+}
+
+.reading-list .mdl-list__item, 
+.reading-list .mdl-list__item-primary-content, 
+.reading-list .mdl-list__item-sub-title {
+  height: unset;
+}
+
+.reading-list > .mdl-list__item:not(:last-child) {
+    border-bottom: 1px solid rgba(0,0,0,.13);
+}
+
+.reading-list > .mdl-list__item .mdl-list__item-icon {
+  font-size: 24px;
+  margin-right: 16px;
+}
+
+.reading-list .mdl-list__item-secondary-content .fa {
+  font-size: 24px;
+}
+
+.reading-list .mdl-list__item-secondary-content .fa-check-square {
+  color: #757575;
+}
+
+.reading-list .mdl-list__item-secondary-content .fa-square-o {
+  color: #757575;
+}
+
+.reading-list .mdl-list__item-secondary-content .fa-square {
+  color: rgb(33, 150, 243);
+}
+
+/* Reading List End */
+
+.onak-post h2 {
+  font-size: 24px;
+  line-height: 32px;
+  margin: 24px 0 16px;
+}
