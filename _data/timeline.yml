@@ -14,10 +14,10 @@ years:
                 events:
                     - 
                         title: Red Software Office
-                        desc: Rented out a little place in Surat to centralize all the efforts towards building a <u>great company</u>.
+                        desc: Rented out a little place in Surat to centralize all the efforts towards building a company.
                     - 
                         title: Moved
-                        desc: Moved to <u>Surat</u> after spending 6 months at <u>Dhoraji</u>.
+                        desc: Moved to Surat.
                     -
                         title: <i class="fa fa-lg fa-picture-o" aria-hidden="true"></i> Photo
                         desc: <img src="/assets/images/timeline/movember2015.jpg" /> Celebrated Movember
@@ -35,14 +35,14 @@ years:
                 stars: 1
                 events:
                     - 
-                        title: Left My First Company
-                        desc: Left my first company <u>L&T Infotech</u> after a satisfying two and a half years. Discovered the coder inside me there.
+                        title: Left The First Company
+                        desc: Left L&T Infotech after a satisfying two and a half years. Unearthed the hidden programmer from within.
                     - 
                         title: Founded A Company
-                        desc: Founded a company called <u>Red Software</u> with college buddies.
+                        desc: Founded a company called Red Software with college buddies.
                     -
                         title: Moved
-                        desc: Moved back to <u>Dhoraji</u> after bidding an emotional adieu to <u>Mumbai</u>.
+                        desc: Moved back to hometown from Mumbai.
     -
         title: 2013
         indexTitle: Fear Killing
@@ -54,8 +54,8 @@ years:
                 stars: 4
                 events:
                     -
-                        title: Joined My First Company
-                        desc: Joined my first company <u>L&T Infotech</u> at Mumbai.
+                        title: Joined The First Company
+                        desc: Joined L&T Infotech at Mumbai.
                     -
                         title: Moved
-                        desc: Moved to the dreaded city of <u>Mumbai</u> from <u>Dhoraji</u>.
+                        desc: Moved to Mumbai.
