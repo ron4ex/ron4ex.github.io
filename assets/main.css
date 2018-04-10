@@ -1,5 +1,6 @@
-html, body {
-  font-family: 'Roboto', 'Helvetica', sans-serif;
+html,
+body {
+  font-family: "Roboto", "Helvetica", sans-serif;
   margin: 0;
   padding: 0;
 }
@@ -38,7 +39,7 @@ a {
 
 .onak-card > .mdl-card__title {
   color: #fff;
-  background: rgb(0,150,136);
+  background: rgb(0, 150, 136);
 }
 
 .onak-card > .mdl-card__supporting-text {
@@ -48,7 +49,7 @@ a {
 
 .onak-profile {
   width: 100%;
-  background: url('images/back.png') left top no-repeat;
+  background: url("images/back.png") left top no-repeat;
   text-align: center;
   background-size: cover;
 }
@@ -79,7 +80,7 @@ a {
 .onak-ribbon {
   width: 100%;
   height: 40vh;
-  background: url('images/ribbon.jpg');
+  background: url("images/ribbon.jpg");
   background-size: cover;
   flex-shrink: 0;
 }
@@ -137,8 +138,8 @@ a {
 
   .onak-blog-list-item > .post-date {
     display: block;
-    text-transform: uppercase; 
-    color: #999; 
+    text-transform: uppercase;
+    color: #999;
     font-size: 75%;
   }
 
@@ -163,7 +164,7 @@ a {
 }
 
 .onak-list .onak-list-content:not(:last-child) {
-    border-bottom: 1px solid rgba(0,0,0,.13);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.13);
 }
 
 .onak-list .onak-list-content {
@@ -261,14 +262,14 @@ a {
   width: auto;
 }
 
-.reading-list .mdl-list__item, 
-.reading-list .mdl-list__item-primary-content, 
+.reading-list .mdl-list__item,
+.reading-list .mdl-list__item-primary-content,
 .reading-list .mdl-list__item-sub-title {
   height: unset;
 }
 
 .reading-list > .mdl-list__item:not(:last-child) {
-    border-bottom: 1px solid rgba(0,0,0,.13);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.13);
 }
 
 .reading-list > .mdl-list__item .mdl-list__item-icon {
@@ -308,13 +309,13 @@ a {
 }
 
 .onak-blog-list-item {
-   padding: 16px 0;
-   border-bottom: 1px solid rgba(0,0,0,.13);
+  padding: 16px 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.13);
 }
 
 .onak-blog-list-item > .post-date {
-  text-transform: uppercase; 
-  color: #999; 
+  text-transform: uppercase;
+  color: #999;
   font-size: 75%;
 }
 
@@ -323,10 +324,40 @@ a {
 }
 
 .onak-blog-list-item > .post-title a {
-   text-transform: uppercase;
+  text-transform: uppercase;
 }
 
 .emoji {
   width: auto;
   height: 24px;
+}
+
+blockquote {
+  background: #f9f9f9;
+  border-left: 10px solid #ccc;
+  margin: 1.5em 10px;
+  padding: 0.5em 10px;
+  quotes: "\201C" "\201D" "\2018" "\2019";
+}
+blockquote:before {
+  color: #ccc;
+  content: unset;
+  font-size: 4em;
+  line-height: 0.1em;
+  margin-right: 0.25em;
+  vertical-align: -0.4em;
+  position: unset;
+}
+
+blockquote:after {
+  content: unset;
+}
+
+blockquote p {
+  display: inline;
+}
+
+.onak-content img {
+  width: 100%;
+  height: auto;
 }
