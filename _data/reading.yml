@@ -1,6 +1,6 @@
 years:
-    - 
-        title: 2017
+    -
+        title: 2018
         books:
             - 
                 title: "You Don't Know JS: Up & Going"
@@ -12,31 +12,35 @@ years:
                 author: Scott Chacon
                 type: programming
                 status: reading
-            - 
-                title: Code Complete, Second Edition
-                author: Steve McConnell
-                type: programming
-                status: to-read
-            - 
-                title: Head First Python
-                author: Paul Barry
-                type: programming
-                status: to-read
-            - 
-                title: Extremely Loud and Incredibly Close
-                author: Jonathan Safran Foer
-                type: fiction
-                status: to-read
+    - 
+        title: 2017
+        books:
+
+            # - 
+            #     title: Code Complete, Second Edition
+            #     author: Steve McConnell
+            #     type: programming
+            #     status: to-read
+            # - 
+            #     title: Head First Python
+            #     author: Paul Barry
+            #     type: programming
+            #     status: to-read
+            # - 
+            #     title: Extremely Loud and Incredibly Close
+            #     author: Jonathan Safran Foer
+            #     type: fiction
+            #     status: to-read
             - 
                 title: "Elon Musk: Tesla, SpaceX, and the Quest for a Fantastic Future"
                 author: Ashlee Vance
                 type: non-fiction
-                status: to-read
-            -
-                title: "Hitch-22: A Memoir"
-                author: Christopher Hitchens
-                type: non-fiction
-                status: to-read
+                status: completed
+            # -
+            #     title: "Hitch-22: A Memoir"
+            #     author: Christopher Hitchens
+            #     type: non-fiction
+            #     status: to-read
     -
         title: 2016
         books:
