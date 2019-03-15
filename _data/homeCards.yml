@@ -30,13 +30,21 @@
   pageToLink: bucket-list.html
   faIcon: fa-remove
 
-- title: Blog
-  desc: How do you write like tomorrow won’t arrive? How do you write like you need it to survive? How do you write ev’ry second you’re alive?
-  buttonText: Exorcise
-  accentColor: rgb(63, 168, 0)
-  image: blog.png
-  pageToLink: blog.html
-  faIcon: fa-pencil
+# - title: Newsletter
+#   desc: How do you write like tomorrow won’t arrive? How do you write like you need it to survive? How do you write ev’ry second you’re alive?
+#   buttonText: Criticize
+#   accentColor: rgb(63, 168, 0)
+#   image: blog.png
+#   faIcon: fa-pencil
+#   link: https://tinyletter.com/ron4ex
+
+# - title: Blog
+#   desc: How do you write like tomorrow won’t arrive? How do you write like you need it to survive? How do you write ev’ry second you’re alive?
+#   buttonText: Exorcise
+#   accentColor: rgb(63, 168, 0)
+#   image: blog.png
+#   pageToLink: blog.html
+#   faIcon: fa-pencil
 
 - title: About
   desc: Oh my God, tear this dude apart!
